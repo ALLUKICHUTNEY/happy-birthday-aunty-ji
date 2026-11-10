@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Auntie Ji 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+    background: #271b35;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    background:
+      linear-gradient(135deg, #25152eaa, #7d355e88, #30234eaa),
+      url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2000&q=85")
+      center/cover no-repeat;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: radial-gradient(circle at top, transparent, #140d20aa);
+    pointer-events: none;
+}
+
+header {
+    padding: 55px 15px 20px;
+}
+
+.tag {
+    letter-spacing: 5px;
+    color: #ffd5e5;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: clamp(36px, 8vw, 70px);
+    color: #ffe2ed;
+    text-shadow: 0 0 25px #ff9bc6;
+    margin: 22px 0;
+}
+
+.subtitle {
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffeaf2;
+    padding: 0 12px;
+}
+
+.sparkle {
+    color: #ffd3e6;
+    font-size: 24px;
+    margin: 18px;
+}
+
+.section {
+    max-width: 760px;
+    margin: 35px auto;
+    padding: 0 17px;
+}
+
+.letter {
+    padding: 32px 25px;
+    border-radius: 25px;
+    background: #ffffff18;
+    border: 1px solid #ffffff55;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 40px #0005;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+}
+
+.letter h2 {
+    color: #ffd5e5;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 90px;
+    height: 2px;
+    background: #ffb5d1;
+    margin: 35px auto;
+}
+
+h2 {
+    color: #ffe2ed;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 18px;
+    margin: 30px auto;
+}
+
+.gift {
+    padding: 23px 10px;
+    border-radius: 22px;
+    background: #ffffff20;
+    border: 1px solid #ffffff55;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gift:hover {
+    transform: translateY(-8px) rotate(2deg);
+    background: #ffb5d155;
+}
+
+.gift-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.gift p {
+    color: #ffe4ef;
+    font-size: 14px;
+}
+
+button {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ffd0e1;
+    color: #52233d;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: #13091dcc;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.popup-box {
+    max-width: 420px;
+    width: 100%;
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: linear-gradient(145deg,#693c65,#a04e79);
+    border: 1px solid #ffffff77;
+    animation: pop .4s ease;
+}
+
+.popup-box p {
+    line-height: 1.9;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+@keyframes pop {
+    from {transform: scale(.4); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* Falling hearts and cakes */
+.falling {
+    position: fixed;
+    top: -50px;
+    z-index: 15;
+    cursor: pointer;
+    user-select: none;
+    animation: fall linear forwards;
+    filter: drop-shadow(0 3px 5px #0004);
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Heart explosion */
+.burst {
+    position: fixed;
+    z-index: 80;
+    pointer-events: none;
+    font-size: 19px;
+    animation: explode .9s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: translate(0,0) scale(.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x),var(--y)) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.final {
+    padding: 40px 15px 60px;
+    line-height: 2;
+    color: #ffe3ed;
+}
+
+footer {
+    color: #ffd2e3;
+    padding: 20px;
+    font-size: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="tag">A LITTLE SURPRISE FROM THE HEART</div>
+
+    <div class="sparkle">✨ 🌷 ✨</div>
+
+    <h1>Happy Birthday<br>Auntie Ji! 💗</h1>
+
+    <p class="subtitle">
+        Sat Sri Akal, Auntie Ji! 🌸
+
+        <br>
+
+        Today is all about celebrating a wonderful woman
+        who deserves all the happiness in the world.
+    </p>
+</header>
+
+<div class="section">
+
+    <div class="divider"></div>
+
+    <!-- GIRLFRIEND'S BIRTHDAY LETTER -->
+
+    <div class="letter">
+
+        <h2>Dear Auntie Ji, 💌</h2>
+
+        Happy Birthday to you! ❤️
+
+        <br><br>
+
+        First of all, I just want to say that you are
+        truly a wonderful person. I may not know you
+        as well as I would like to, but I feel so lucky
+        to be able to wish you on your special day.
+
+        <br><br>
+
+        And honestly, thank you for raising such a
+        beautiful-hearted person. You gave the world
+        such a caring, lovely and amazing son, and
+        somehow, I got lucky enough to have him
+        in my life. 🥹❤️
+
+        <br><br>
+
+        Auntie Ji, I hope you know how special you are.
+        Your happiness matters, your smile matters,
+        and you deserve every beautiful thing life
+        has to offer.
+
+        <br><br>
+
+        May your days always be filled with laughter,
+        your home with happiness, and your heart
+        with peace.
+
+        <br><br>
+
+        Rab tuhanu hamesha khush rakhe,
+        tandurusti deve te tuhadi zindagi nu
+        khushiyan naal bhar deve. Ameen. 🤲
+
+        <br><br>
+
+        Enjoy your day, Auntie Ji.
+        Keep smiling, keep shining and keep blessing
+        everyone around you.
+
+        <br><br>
+
+        <strong style="color:#ffd0e1;">
+            Lots of love and warm wishes! 🌹
+        </strong>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>🎁 Little Surprises For You 🎁</h2>
+
+    <p style="color:#ffe3ed;line-height:1.8;">
+        Auntie Ji, I have hidden some little wishes for you.
+        Tap each gift and discover them! 💗
+    </p>
+
+    <div class="gift-grid">
+
+        <div class="gift" onclick="openGift(0)">
+            <span class="gift-icon">🌹</span>
+            <p>A Rose For You</p>
+        </div>
+
+        <div class="gift" onclick="openGift(1)">
+            <span class="gift-icon">🎂</span>
+            <p>Birthday Cake</p>
+        </div>
+
+        <div class="gift" onclick="openGift(2)">
+            <span class="gift-icon">💌</span>
+            <p>Little Compliment</p>
+        </div>
+
+        <div class="gift" onclick="openGift(3)">
+            <span class="gift-icon">🧿</span>
+            <p>My Blessings</p>
+        </div>
+
+        <div class="gift" onclick="openGift(4)">
+            <span class="gift-icon">💎</span>
+            <p>Precious You</p>
+        </div>
+
+        <div class="gift" onclick="openGift(5)">
+            <span class="gift-icon">🧸</span>
+            <p>A Virtual Hug</p>
+        </div>
+
+        <div class="gift" onclick="openGift(6)">
+            <span class="gift-icon">🥂</span>
+            <p>Party Time!</p>
+        </div>
+
+        <div class="gift" onclick="openGift(7)">
+            <span class="gift-icon">💗</span>
+            <p>One Last Wish</p>
+        </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>One Little Thing, Auntie Ji... 🌙</h2>
+
+    <p style="font-size:19px;line-height:2;color:#ffe5ef;">
+        You raised someone who means so much to me.
+        And for that, you will always have a special
+        place in my heart.
+
+        <br><br>
+
+        Rab rakha! ❤️
+    </p>
+
+</div>
+
+<div class="final">
+
+    <div style="font-size:45px;">💗🌷💗</div>
+
+    <h1 style="font-size:35px;">
+        Stay Blessed, Auntie Ji!
+    </h1>
+
+    <p>
+        Made with love, smiles and a little Punjabi tadka. 🥰
+    </p>
+
+    <br>
+
+    <p style="font-size:18px;">
+        With lots of love,<br>
+        Your son's special person. ❤️
+    </p>
+
+</div>
+
+<footer>
+    Chandigarh vibes, endless wishes. 🌆💗
+</footer>
+
+
+<!-- POPUP -->
+
+<div id="popup" onclick="closeGift(event)">
+    <div class="popup-box">
+
+        <div id="emoji" style="font-size:55px;">🌹</div>
+
+        <h2 id="title">A Special Wish</h2>
+
+        <p id="message"></p>
+
+        <button onclick="closeGift()">Aww, Thank You! 💗</button>
+
+    </div>
+</div>
+
+
+<!-- OPTIONAL MUSIC -->
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+// Birthday gifts
+
+const gifts = [
+
+{
+emoji:"🌹",
+title:"A Rose For You",
+message:"A beautiful rose for a beautiful soul. May your life always smell like happiness and bloom with countless blessings. 🌹"
+},
+
+{
+emoji:"🎂",
+title:"A Sweet Birthday",
+message:"May your birthday be as sweet as your favourite cake and your entire year be even sweeter! Enjoy every moment, Auntie Ji. 🎂"
+},
+
+{
+emoji:"💌",
+title:"A Little Compliment",
+message:"I think the world deserves to know that a wonderful mother raised a wonderful person. Thank you for giving me someone who makes my days brighter. ❤️"
+},
+
+{
+emoji:"🧿",
+title:"A Prayer For You",
+message:"May Waheguru protect you from every difficulty, bless you with good health and fill your life with peace and happiness. Rab tuhanu chardi kala vich rakhe! 🤲"
+},
+
+{
+emoji:"💎",
+title:"You Are Precious",
+message:"Some people make the world a better place simply by being in it. I hope you always remember how precious and appreciated you are. 💎"
+},
+
+{
+emoji:"🧸",
+title:"A Virtual Hug",
+message:"Sending you the biggest virtual hug, Auntie Ji! Imagine a thousand flowers and a million smiles arriving at your doorstep today. 🤗"
+},
+
+{
+emoji:"🥳",
+title:"Party Time!",
+message:"Today no worries, no tension! Just happiness, delicious food, music and lots of celebrations. Chandigarh style! 🥳💃"
+},
+
+{
+emoji:"💗",
+title:"One Last Wish",
+message:"Thank you for being the woman who raised someone so special to me. May your smile never fade and may you always have reasons to celebrate. Happy Birthday, Auntie Ji! Lots of love. 💗"
+}
+
+];
+
+function openGift(index) {
+
+    const gift = gifts[index];
+
+    document.getElementById("emoji").innerText = gift.emoji;
+    document.getElementById("title").innerText = gift.title;
+    document.getElementById("message").innerText = gift.message;
+
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closeGift(event) {
+
+    if (!event ||
+        event.target.id === "popup" ||
+        event.target.tagName === "BUTTON") {
+
+        document.getElementById("popup").style.display = "none";
+    }
+}
+
+
+// Falling objects
+
+const objects = ["❤️","💗","💕","💖","💝","🌸","🎂","🧁","✨"];
+
+function createFalling() {
+
+    const item = document.createElement("div");
+
+    item.className = "falling";
+
+    item.innerText =
+        objects[Math.floor(Math.random() * objects.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.fontSize = (18 + Math.random() * 20) + "px";
+    item.style.animationDuration = (6 + Math.random() * 8) + "s";
+
+    // Heart click explosion
+    if (["❤️","💗","💕","💖","💝"].includes(item.innerText)) {
+        item.addEventListener("click", function(e) {
+            e.stopPropagation();
+            explode(e.clientX, e.clientY);
+            item.remove();
+        });
+    }
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 15000);
+}
+
+setInterval(createFalling, 250);
+
+
+// Heart explosion
+
+function explode(x, y) {
+
+    const tinyHearts = ["💗","💕","💖","❤️","💘","✨"];
+
+    for (let i = 0; i < 18; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "burst";
+
+        heart.innerText =
+            tinyHearts[Math.floor(Math.random() * tinyHearts.length)];
+
+        heart.style.left = x + "px";
+        heart.style.top = y + "px";
+
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 40 + Math.random() * 110;
+
+        heart.style.setProperty("--x",
+            Math.cos(angle) * distance + "px");
+
+        heart.style.setProperty("--y",
+            Math.sin(angle) * distance + "px");
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 1000);
+    }
+}
+
+
+// Tap anywhere for a small sparkle
+
+document.addEventListener("click", function(e) {
+
+    if (e.target.closest(".gift") ||
+        e.target.closest("#popup") ||
+        e.target.closest("button")) return;
+
+    if (e.target.classList.contains("falling")) return;
+
+    explode(e.clientX, e.clientY);
+});
+
+
+// Optional music: starts on first visitor interaction
+
+let musicStarted = false;
+
+function startMusic() {
+
+    if (musicStarted) return;
+
+    const music = document.getElementById("music");
+    music.volume = 0.3;
+
+    music.play().then(() => {
+        musicStarted = true;
+    }).catch(() => {});
+}
+
+document.addEventListener("click", startMusic, {once:true});
+
+</script>
+
+</body>
+</html>
